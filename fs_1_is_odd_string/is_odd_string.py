@@ -27,5 +27,11 @@ def is_odd_string(word):
         >>> is_odd_string('amazing')
         True
     """
-
+    # if lowercase, subtract 96, if uppercase, subtra
+    word = word.lower()
+    counter = 0
+    for char in word:
+        counter += ord(char) - 96
+    return counter % 2 == 1
+    
     # Hint: you may find the ord() function useful here
